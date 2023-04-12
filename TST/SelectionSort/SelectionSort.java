@@ -15,24 +15,23 @@ class SelectionSort {
         lista[i2] = sup;
     }
 
-    private static void selectionSort(int[] lista) {
-        for (int i = 0; i < lista.length - 1; i++) {
+    private static void selectionSort(int[] lista, int start, int end) {
+        for (int i = start; i < end; i++) {
             int sup = i;
-            for (int j = i + 1; j < lista.length; j++) {
+            for (int j = i + 1; j < end; j++) 
                 if (lista[j] < lista[sup])
                     sup = j;    
-            }
-
-            if (sup != i) {
+            
+            if (sup != i) 
                 swap(lista, i, sup);
-                System.out.println(Arrays.toString(lista));
-            }
         }
     }
 
     public static void main(String[] args) {
+        int[] entrada = new int[] { 6, 41, 32, 7, 26, 4, 37, 49, 11, 18, 36 };
         Scanner input = new Scanner(System.in);
-        int[] entrada = toIntArray(input.nextLine().split(" "));
-        selectionSort(entrada);
+        // int[] entrada = toIntArray(input.nextLine().split(" "));
+        selectionSort(entrada, 0, entrada.length - 1);
+        System.out.println(Arrays.toString(entrada));
     }
 }
