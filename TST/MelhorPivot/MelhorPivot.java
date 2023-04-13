@@ -2,31 +2,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class MelhorPivot {
-    // private static int[] maioresMenores(int[] lista, int valor) {
-    //     int menores = 0;
-    //     int maiores = 0;
-    //     for (int i : lista) {
-    //         if (i >= valor) 
-    //             menores += 1;
-    //         else 
-    //             menores += 1;
-    //     }
-    //     return new int[]{menores, maiores};   
-    // }
-
-    // public static double quociente(double valor1, Double valor2) {
-    //     if (valor1 < valor2) {
-    //         double sup = valor2;
-    //         valor2 = valor1;
-    //         valor1 = sup;
-    //     }
-        
-    //     if (valor2 == 0)
-    //         return -1;
-
-    //     return valor1 / valor2;
-    // }
-
     public static int mediana(int[] values) {
         int mid = (values.length - 1) / 2;
         
@@ -42,19 +17,13 @@ class MelhorPivot {
         return values.length - 1;
     }
 
-    public static int poss(int i) {
-        if (i < 0) 
-            return i * -1;
-        return i;
-    }
-
     private static int melhorPivot(int[] lista, int i1, int i2) {
         int mid = mediana(lista);
         
-        int dif1 = poss(mid % lista[i1]);
-        int dif2 = poss(mid % lista[i2]);
+        int dif1 = Math.abs(mid - lista[i1]);
+        int dif2 = Math.abs(mid - lista[i2]);
 
-        return (dif1 < dif2) ? i1 : i2;
+        return (dif1 <= dif2) ? i1 : i2;
     }
 
     private static int[] toIntArray(String[] entrada) {
