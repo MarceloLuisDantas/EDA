@@ -9,12 +9,12 @@ class MelhorPivot {
         Arrays.sort(sorted);
         
         if (sorted[1] == values[0]) 
-            return 0;
+            return values[0];
 
         if (sorted[1] == values[mid]) 
-            return mid;
+            return values[mid];
 
-        return values.length - 1;
+        return values[values.length - 1];
     }
 
     private static int melhorPivot(int[] lista, int i1, int i2) {
@@ -22,7 +22,7 @@ class MelhorPivot {
         
         int dif1 = Math.abs(mid - lista[i1]);
         int dif2 = Math.abs(mid - lista[i2]);
-
+        
         return (dif1 <= dif2) ? i1 : i2;
     }
 
