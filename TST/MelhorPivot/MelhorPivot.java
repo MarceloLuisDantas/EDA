@@ -22,7 +22,7 @@ class MelhorPivot {
         
         int dif1 = Math.abs(mid - lista[i1]);
         int dif2 = Math.abs(mid - lista[i2]);
-        
+
         return (dif1 <= dif2) ? i1 : i2;
     }
 
