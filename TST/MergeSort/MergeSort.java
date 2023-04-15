@@ -9,7 +9,7 @@ class MergeSort {
     }
 
     private static void merge(int[] lista, int left, int mid, int right) {
-            int[] sup = new int[lista.length];
+        int[] sup = new int[lista.length];
         for (int i = left; i <= right; i++) 
             sup[i] = lista[i];
         
