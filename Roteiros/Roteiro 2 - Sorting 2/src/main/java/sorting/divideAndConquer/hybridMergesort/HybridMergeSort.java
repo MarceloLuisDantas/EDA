@@ -38,6 +38,7 @@ public class HybridMergeSort<T extends Comparable<T>> extends
     }
 
 	private void insertionSort(T[] lista, int start, int end) {
+		INSERTIONSORT_APPLICATIONS += 1;
 		for (int i = start; i <= end; i++) {
 			T key = lista[i];
 			int count = i - 1;
@@ -50,6 +51,7 @@ public class HybridMergeSort<T extends Comparable<T>> extends
 	}
 
 	private void merge(T[] lista, int start, int mid, int end) {
+		MERGESORT_APPLICATIONS += 2;
 		T[] sup = (T[]) new Comparable[lista.length];
 		for (int i = 0; i < sup.length; i++) 
 			sup[i] = lista[i];
