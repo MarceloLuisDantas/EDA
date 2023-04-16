@@ -3,9 +3,10 @@ import java.util.Scanner;
 
 class Counting {
     private static void showArray(int[] lista) {
-        for (int i : lista) 
-            System.out.print(i + " ");
-        System.out.println();
+        for (int i = 0; i < lista.length - 1; i++) {
+            System.out.print(lista[i] + " ");
+        }
+        System.out.println(lista[lista.length - 1]);
     }
 
     private static void countingSort(int[] lista, int max) {
