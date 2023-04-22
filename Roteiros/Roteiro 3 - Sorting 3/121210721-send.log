@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-21T15:03:04.644-0300</date>
+  <logger>MARCELO LUIS DE MACEDO DANTAS</logger>
+  <level>FINE</level>
+  <message>File 121210721-MARCELO LUIS DE MACEDO DANTAS.zip was received. It was sent by MARCELO LUIS DE MACEDO DANTAS from IP 192.168.25.8 at 21-04-2023 15*03*04</message>
+</record>
