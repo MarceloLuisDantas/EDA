@@ -19,8 +19,7 @@ public class QueueImpl<T> implements Queue<T> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		return tail == -1;
 	}
 
 	@Override
