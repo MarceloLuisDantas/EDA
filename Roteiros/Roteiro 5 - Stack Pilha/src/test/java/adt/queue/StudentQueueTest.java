@@ -82,10 +82,8 @@ public class StudentQueueTest {
 
 	@Test(expected = QueueUnderflowException.class)
 	public void testDequeueComErro() throws QueueUnderflowException {
-		try {
-			queue3.dequeue();
-		} catch (Exception e) {
-			assertEquals(e.getMessage(), "Fila vazia"); 
-		}											
+		assertEquals(new Integer(1), queue3.dequeue()); // vai depender do
+														// tamanho que a fial
+														// foi iniciada!!!
 	}
 }
