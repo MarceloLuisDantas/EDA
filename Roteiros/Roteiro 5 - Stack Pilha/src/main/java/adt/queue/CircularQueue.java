@@ -14,34 +14,41 @@ public class CircularQueue<T> implements Queue<T> {
 		elements = 0;
 	}
 
+	private int proximaPosicao(int x) {
+		if (x >= array.length - 1) return 0;
+		return x + 1; 
+	}
+
 	@Override
 	public void enqueue(T element) throws QueueOverflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (isFull()) throw new QueueOverflowException();
+		head = proximaPosicao(head);
+		array[head] = element;
+		elements += 1;
 	}
 
 	@Override
 	public T dequeue() throws QueueUnderflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (isEmpty()) throw new QueueUnderflowException();
+		T result = array[tail + 1];
+		tail = proximaPosicao(tail);
+		elements -= 1;
+		return result;
 	}
 
 	@Override
 	public T head() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		return array[tail + 1];
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		return elements == 0;
 	}
 
 	@Override
 	public boolean isFull() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		return elements == array.length;
 	}
 
 }

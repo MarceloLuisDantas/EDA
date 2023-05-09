@@ -13,6 +13,8 @@ public class StackImpl<T> implements Stack<T> {
 
 	@Override
 	public T top() {
+		if (top == -1) 
+			return null;
 		return array[top];
 	}
 
