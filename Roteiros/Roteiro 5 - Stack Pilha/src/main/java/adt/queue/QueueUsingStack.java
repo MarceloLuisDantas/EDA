@@ -15,32 +15,55 @@ public class QueueUsingStack<T> implements Queue<T> {
 
 	@Override
 	public void enqueue(T element) throws QueueOverflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		try {
+			stack1.push(element);
+		} catch (Exception e) {
+			throw new QueueOverflowException();
+		}		
+	}
+
+	private void transferir(Stack s1, Stack s2) throws QueueUnderflowException {
+		try {
+			while (!s1.isEmpty()) 
+				s2.push(s1.pop());
+		} catch (Exception e) {
+			throw new QueueUnderflowException();
+		}
 	}
 
 	@Override
 	public T dequeue() throws QueueUnderflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (isEmpty()) { throw new QueueUnderflowException(); }
+		try {
+			transferir(stack1, stack2);
+			T result = stack2.pop();
+			transferir(stack2, stack1);
+			return result;
+		} catch (Exception e) {
+			throw new QueueUnderflowException();
+		}
 	}
 
 	@Override
 	public T head() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		try {
+			transferir(stack1, stack2);	
+			T result = stack2.top();
+			transferir(stack2, stack1);			
+			return result;
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		return stack1.isEmpty();
 	}
 
 	@Override
 	public boolean isFull() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		return stack1.isFull();
 	}
 
 }
