@@ -147,6 +147,14 @@ public class LinkedList {
         return this.size;
     }
 
+    public void swap(int i1, int i2) {
+        int valor1 = get(i1);
+        int valor2 = get(i2);
+        
+        insert(valor1, i2);
+        insert(valor2, i1);
+    } 
+
     public String toString() {
         if (head == null) 
             return "Vazia";

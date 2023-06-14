@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-06-08T19:04:04.350-0300</date>
+  <logger>MARCELO LUIS DE MACEDO DANTAS</logger>
+  <level>FINE</level>
+  <message>File 121210721-MARCELO LUIS DE MACEDO DANTAS.zip was received. It was sent by MARCELO LUIS DE MACEDO DANTAS from IP 192.168.25.8 at 08-06-2023 19*04*04</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-06-08T20:08:06.503-0300</date>
+  <logger>MARCELO LUIS DE MACEDO DANTAS</logger>
+  <level>FINE</level>
+  <message>File 121210721-MARCELO LUIS DE MACEDO DANTAS.zip was received. It was sent by MARCELO LUIS DE MACEDO DANTAS from IP 192.168.25.8 at 08-06-2023 20*08*06</message>
+</record>
